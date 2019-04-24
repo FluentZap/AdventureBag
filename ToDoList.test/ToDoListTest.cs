@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AdventureBag;
+using System;
 
 namespace ToDoList.Tests
 {
@@ -75,19 +76,13 @@ namespace ToDoList.Tests
       bag.AddItem(Listof_Items.IronOre, 14);
       bag.AddItem(Listof_Items.LogOfWood, 12);
 
-      bool foundItem = false;
-      for (int i = 0; i < 49; i++)
-      {
-        var listOfItems = bag.GetAllItems();
-        var takenItem = bag.GetRandomItem();
+      var listOfItems = bag.GetAllItems();
 
-        foreach(Listof_Items item in listOfItems)
-        {
-          if (item.Name == takenItem) foundItem = true;
-        }
-        Assert.AreEqual(true, foundItem);
+      for (int i = 0; i < 52; i++)
+      {
+        var takenItem = bag.GetRandomItem();
       }
-      Assert.AreEqual(listOfItems.Nothing, bag.GetRandomItem());
+      Assert.AreEqual(Listof_Items.Nothing, bag.GetRandomItem());
     }
   }
 
