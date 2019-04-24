@@ -6,6 +6,9 @@ namespace Anagram.Tests
   [TestClass]
   public class TestMethods
   {
-    // Test methods go here
+    Anagram anagram = new Anagram();
+    
+
+
   }
 }
