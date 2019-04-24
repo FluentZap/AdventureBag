@@ -34,8 +34,6 @@ namespace AdventureBag
 
   }
 
-
-
   public class BagItem
   {
     public Listof_Items Name;
