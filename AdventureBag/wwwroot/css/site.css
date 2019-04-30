@@ -8,5 +8,23 @@ html, body {
 }
 
 .btn {
+  /* background-color: rgba(100, 100, 100, 0.5); */
+  height: 400px;
+  margin: 10px;
+  vertical-align:
+}
+
+.btn-dark {
   background-color: rgba(100, 100, 100, 0.5);
+}
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active, .open>.dropdown-toggle.btn-dark {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.btn img {
+  width: 300px;
+}
+
+.container {
+  padding-top: 100px;
 }

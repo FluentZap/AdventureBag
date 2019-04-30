@@ -48,9 +48,9 @@ namespace Adventure
 
   public class Bag
   {
-    List<BagItem> _Items = new List<BagItem>();
+    static List<BagItem> _Items = new List<BagItem>();
 
-    public void AddItem(Listof_Items name, int quanity)
+    public static void AddItem(Listof_Items name, int quanity)
     {
       for (int i = 0; i < _Items.Count; i++)
       {
@@ -63,7 +63,7 @@ namespace Adventure
       _Items.Add(new BagItem(name, quanity));
     }
 
-    public int CheckForItem(Listof_Items name)
+    public static int CheckForItem(Listof_Items name)
     {
       foreach(BagItem item in _Items)
       {
@@ -75,7 +75,7 @@ namespace Adventure
       return 0;
     }
 
-    public bool GetItem(Listof_Items name)
+    public static bool GetItem(Listof_Items name)
     {
       for (int i = 0; i < _Items.Count; i++)
       {
@@ -88,12 +88,12 @@ namespace Adventure
       return false;
     }
 
-    public List<BagItem> GetAllItems()
+    public static List<BagItem> GetAllItems()
     {
       return _Items;
     }
 
-    private void RemoveItems(Listof_Items name, int quanity)
+    private static void RemoveItems(Listof_Items name, int quanity)
     {
       for (int i = 0; i < _Items.Count; i++)
       {
@@ -107,7 +107,7 @@ namespace Adventure
       }
     }
 
-    public Listof_Items GetRandomItem()
+    public static Listof_Items GetRandomItem()
     {
       Random rand = new Random();
 

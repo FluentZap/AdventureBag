@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Adventure.Models;
+using Adventure;
 using System.Collections.Generic;
 using System;
 
@@ -7,6 +7,7 @@ namespace Adventure.Controllers
 {
   public class HomeController : Controller
   {
+
 
     [HttpGet("/")]
     public ActionResult Index()

@@ -11,18 +11,29 @@
   </head>
   <body>
     <div class="container">
-      <a href="/adventurebag" role="button" class="btn btn-dark"><h2>Adventure Bag</h2>
-        <img src="~/img/AdventureBagPoor.png"/>
-      </a>
-        <a href="/stable" role="button" class="btn btn-dark"><h2>Stable</h2>
-        <img src="~/img/HorseShop.png"/>
-      </a>
-        <a href="/noticeboard" role="button" class="btn btn-dark"><h2>Notice Board</h2>
-        <img src="~/img/NoticeBoard.jpg"/>
-      </a>
-        <a href="/greenforce" role="button" class="btn btn-dark"><h2>Greenforce</h2><h2>Deliveries</h2>
-        <img src="~/img/Delivery.gif"/>
-      </a>    
+      @if (Model.Count == 0)
+      {
+        <p>You have no items in your bag!</p>
+      }
+      @if(Model.Count != 0)
+      {
+        @foreach (BagItem item in Model)
+        {
+          <li>@item.Quanity @item.Name</li>
+        }
+      }
+
+      @if (Model.Count == 0)
+      {
+        <p>You have no items in your bag!</p>
+      }
+      @if(Model.Count != 0)
+      {
+        @foreach (BagItem item in Model)
+        {
+          <li>@item.Quanity @item.Name</li>
+        }
+      }
     </div>
   </body>
 </html>
