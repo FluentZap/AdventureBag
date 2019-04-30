@@ -1,0 +1,30 @@
+/* font-family: 'Exo', sans-serif; */
+
+html, body {
+  background-image: url(../img/paper-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  height: 100%;
+  font-family: 'Black And White Picture', sans-serif;
+  font-size: 30px;
+}
+
+.btn {
+  /* background-color: rgba(100, 100, 100, 0.5); */
+  height: 40px;
+  margin: 10px;
+  font-size: 12px; 
+}
+
+.btn-dark {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active, .open>.dropdown-toggle.btn-dark {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.container {
+  padding-top: 100px;
+}

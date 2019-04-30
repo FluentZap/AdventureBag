@@ -1,5 +1,5 @@
 namespace Adventure
-{  
+{
 
   public class BagViewController
   {

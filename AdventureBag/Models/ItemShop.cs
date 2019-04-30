@@ -13,7 +13,7 @@ namespace Adventure
     Random rnd = new Random();
     int items = Enum.GetNames(typeof(Listof_Items)).Length;
     for (int i = 0; i < 30; i++) {
-      AddItem((Listof_Items)rnd.Next(0, items), 1);
+      AddItem((Listof_Items)rnd.Next(1, items), 1);
     }
   }
 

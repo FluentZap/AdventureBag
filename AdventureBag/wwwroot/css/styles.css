@@ -1,3 +1,5 @@
+/* font-family: 'Exo', sans-serif; */
+
 html, body {
   background-image: url(../img/paper-background.jpg);
   background-position: center;
@@ -5,11 +7,14 @@ html, body {
 
   background-size: cover;
   height: 100%;
+  font-family: 'Black And White Picture', sans-serif;
+  font-size: 20px;
 }
 
 .btn {
   /* background-color: rgba(100, 100, 100, 0.5); */
   height: 400px;
+  width: 250px;
   margin: 10px;
   vertical-align:
 }
@@ -22,7 +27,7 @@ html, body {
 }
 
 .btn img {
-  width: 300px;
+  width: 200px;
 }
 
 .container {
