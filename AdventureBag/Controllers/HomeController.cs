@@ -16,20 +16,7 @@ namespace Adventure.Controllers
       // Console.WriteLine("Index Method");
       return View();
     }
-
-    [HttpGet("/items/new")]
-    public ActionResult CreateForm()
-    {
-      return View();
-    }
-
-    [HttpPost("/items")]
-    public ActionResult Create(string description)
-    {
-      Item myItem = new Item(description);
-      return View();
-      //return RedirectToAction("Index");
-    }
+  
 
   }
 }

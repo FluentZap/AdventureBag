@@ -7,13 +7,13 @@ namespace Adventure
 
   public static class AdventureTime
   {
-    public static Bag adventureBag;
+    public static Bag bag;
     public static Shop shop;
 
 
     static AdventureTime()
     {
-      adventureBag = new Bag();
+      bag = new Bag();
       shop = new Shop();
 
     }

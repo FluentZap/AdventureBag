@@ -10,9 +10,12 @@ namespace Adventure.Controllers
     [HttpGet("/adventurebag")]
     public ActionResult Index ()
     {
-      List<BagItem> allItems = AdventureTime.adventureBag.GetAllItems();
-      Bag.AddItem(Listof_Items.LongSword, 1);
-      return View(allItems);
+      //List<BagItem> allItems = AdventureTime.adventureBag.GetAllItems();
+      //AdventureTime.adventureBag.AddItem(Listof_Items.LongSword, 1);
+      BagViewController bagview = new BagViewController();
+      bagview.bag = AdventureTime.bag;
+      bagview.shop = AdventureTime.shop;
+      return View(bagview);
     }
 
   }

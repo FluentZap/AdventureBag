@@ -8,19 +8,19 @@ namespace Adventure
   {
 
 
-  static Shop()
+  public Shop()
   {
     Random rnd = new Random();
     int items = Enum.GetNames(typeof(Listof_Items)).Length;
     for (int i = 0; i < 30; i++) {
       AddItem((Listof_Items)rnd.Next(0, items), 1);
-    }  
+    }
   }
 
 
-    static List<BagItem> _Items = new List<BagItem>();
+    List<BagItem> _Items = new List<BagItem>();
 
-    public static void AddItem(Listof_Items name, int quanity)
+    public void AddItem(Listof_Items name, int quanity)
     {
       for (int i = 0; i < _Items.Count; i++)
       {
@@ -33,7 +33,7 @@ namespace Adventure
       _Items.Add(new BagItem(name, quanity));
     }
 
-    public static bool GetItem(Listof_Items name)
+    public bool GetItem(Listof_Items name)
     {
       for (int i = 0; i < _Items.Count; i++)
       {
@@ -46,12 +46,12 @@ namespace Adventure
       return false;
     }
 
-    public static List<BagItem> GetAllItems()
+    public List<BagItem> GetAllItems()
     {
       return _Items;
     }
 
-    private static void RemoveItems(Listof_Items name, int quanity)
+    private void RemoveItems(Listof_Items name, int quanity)
     {
       for (int i = 0; i < _Items.Count; i++)
       {
@@ -65,7 +65,7 @@ namespace Adventure
       }
     }
 
-    public static Listof_Items GetRandomItem()
+    public Listof_Items GetRandomItem()
     {
       Random rand = new Random();
 
