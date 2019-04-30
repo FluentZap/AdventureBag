@@ -1,8 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AdventureBag;
+using Adventure;
 using System;
 
-namespace ToDoList.Tests
+namespace Adventure.Tests
 {
 
   [TestClass]

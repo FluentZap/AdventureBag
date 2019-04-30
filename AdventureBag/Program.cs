@@ -1,6 +1,6 @@
 using System;
 
-namespace AdventureBag
+namespace Adventure
 {
   public class Program
   {

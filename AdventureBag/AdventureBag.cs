@@ -11,7 +11,7 @@ using System.Collections.Generic;
 //Hole in the bag loose random items
 //Have a puch for a specific item in the bag
 
-namespace AdventureBag
+namespace Adventure
 {
 
   public enum Listof_Items
