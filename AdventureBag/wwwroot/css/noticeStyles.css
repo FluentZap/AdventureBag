@@ -1,0 +1,35 @@
+html, body {
+  background-image: url(../img/paper-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  height: 100%;
+  font-family: 'Black And White Picture', sans-serif;
+  font-size: 20px;
+}
+
+
+.btn-dark {
+  background-color: rgba(100, 100, 100, 0.5);
+}
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active, .btn-dark.active, .open>.dropdown-toggle.btn-dark {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+textarea {
+  margin-bottom: 10px;
+}
+
+.container {
+  padding-top: 100px;
+  background-image: url(../img/Notice-Board-blank1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 80%;
+}

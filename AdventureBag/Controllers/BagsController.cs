@@ -31,14 +31,14 @@ namespace Adventure.Controllers
       return RedirectToAction("Index");
     }
 
-    [HttpPost("/adventurebuy")]
-    public ActionResult ItemBuy(string buyitem)
-    {
-      //Listof_Items myStatus;
-      Enum.TryParse(buyitem, out Listof_Items myStatus);
-
-      AdventureTime.bag.AddItem(myStatus, 1);
-      return RedirectToAction("Index");
-    }
+    // [HttpPost("/adventurebuy")]
+    // public ActionResult ItemBuy(string buyitem)
+    // {
+    //   //Listof_Items myStatus;
+    //   Enum.TryParse(buyitem, out Listof_Items myStatus);
+    //
+    //   AdventureTime.bag.AddItem(myStatus, 1);
+    //   return RedirectToAction("Index");
+    // }
   }
 }
