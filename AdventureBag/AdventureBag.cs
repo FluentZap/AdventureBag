@@ -30,8 +30,6 @@ namespace Adventure
     GoldOre,
     IronIngot,
     GoldIngot
-
-
   }
 
   public class BagItem
@@ -54,15 +52,15 @@ namespace Adventure
 
     public void AddItem(Listof_Items name, int quanity)
     {
-       for (int i = 0; i < _Items.Count; i++)
-       {
-         if (_Items[i].Name == name)
-         {
-           _Items[i].Quanity += quanity;
-           return;
-         }
-       }
-       _Items.Add(new BagItem(name, quanity));
+      for (int i = 0; i < _Items.Count; i++)
+      {
+        if (_Items[i].Name == name)
+        {
+          _Items[i].Quanity += quanity;
+          return;
+        }
+      }
+      _Items.Add(new BagItem(name, quanity));
     }
 
     public int CheckForItem(Listof_Items name)
@@ -136,14 +134,5 @@ namespace Adventure
       }
       return Listof_Items.Nothing;
     }
-
-
-
   }
-
-
-
-
-
-
 }
