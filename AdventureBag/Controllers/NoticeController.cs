@@ -18,10 +18,9 @@ namespace Adventure.Controllers
     public ActionResult CreateNotice(string title, string description, string reward, string postedby, string expiration)
     {
       NoticeItem notice = new NoticeItem();
-      notice.Title = title;
-
+      notice.Title = title;			
       //{Title: title, Body: description, Reward: reward, PostedBy: postedby, Expiration: expiration}
-      AdventureTime.notice.AddNotice(new NoticeItem());
+      AdventureTime.notice.AddNotice(notice);
 
       return RedirectToAction("Index");
     }

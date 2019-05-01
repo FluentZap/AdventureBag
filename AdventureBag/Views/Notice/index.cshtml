@@ -1,13 +1,14 @@
-@using Adventure;
+﻿@using Adventure;
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="~/css/noticeStyles.css">
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="~/js/notice.js"></script>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="~/css/noticeStyles.css">
 </head>
 <body>
   <div class="container">
@@ -18,19 +19,19 @@
     @if(Model.Count != 0)
     {
       @foreach (NoticeItem item in Model)
-      {
+		 {
         <li>@item.Title</li>
-      }
+		 }
     }
 
 
   </div>
-  <a href="/addnotice" role="button" class="btn btn-dark"><h2>Add Notice</h2></a>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-  @* <a href="/complete" role="button" class="btn btn-dark"><h2>Complete</h2></a>
-  <a href="/" role="button" class="btn btn-dark"><h2>Adventure Bag</h2></a> *@
+	<div style="text-align:center;">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Post Notice</button>
+	</div>
+
+  @*<a href="/addnotice" role="button" class="btn btn-dark"><h2>Add Notice</h2></a>*@
+  
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -43,20 +44,20 @@
         </div>
         <form action="/addnotice" method="post">
           <div class="modal-body">
-            <input class="form-control" type="text" placeholder="Title" name="title">
+            <input class="form-control" type="text" placeholder="Title" id="title" name="title">
 
-            <textarea placeholder="Description of notice" class="form-control" id="exampleFormControlTextarea1" rows="8" name="description"></textarea>
+            <textarea placeholder="Description of notice" class="form-control" rows="8" id="description" name="description"></textarea>
 
             <div class="row">
                <div class="col">
-                 <input type="text" class="form-control" placeholder="Rewards" name="reward">
+                 <input type="text" class="form-control" placeholder="Rewards" id="reward" name="reward">
                </div>
                <div class="col">
-                 <input type="text" class="form-control" placeholder="Posted By" name="postedby">
+                 <input type="text" class="form-control" placeholder="Posted By" id="postedby" name="postedby">
                </div>
              </div>
 
-            <input class="form-control" type="text" placeholder="Expiration" name="expiration">
+            <input class="form-control" type="text" placeholder="Expiration" id="expiration" name="expiration">
 
           </div>
           <div class="modal-footer">
