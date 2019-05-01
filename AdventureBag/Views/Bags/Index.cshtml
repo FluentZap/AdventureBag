@@ -1,36 +1,39 @@
-@using Adventure;
+﻿@using Adventure;
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="~/css/bagStyles.css">
-  <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="~/js/bag.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/bagStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-me-6">
+			<div class="col-me-6">
 
-        <h2>Adventure Bag</h2>
-        @if (Model.bag.GetAllItems().Count == 0)
-        {
-          <p>You have no items in your bag!</p>
-        }
-        @if(Model.bag.GetAllItems().Count != 0)
-        {
-          @foreach (BagItem item in Model.bag.GetAllItems())
-          {
-            <li>@item.Quanity @item.Name</li>
-          }
-        }
-      </div>
+				<h2>Adventure Bag</h2>
+				<ul id="shopList">
+					@if (Model.bag.GetAllItems().Count == 0)
+					{
+						<p>You have no items in your bag!</p>
+					}
+					@if (Model.bag.GetAllItems().Count != 0)
+					{
+						@foreach (BagItem item in Model.bag.GetAllItems())
+						{
+							<li>@item.Quanity @item.Name</li>
+						}
+					}
+				</ul>
+			</div>
 
       <div class="col-me-6">
-        <h2>Shop Items</h2>
+        <h2>Shop Items</h2>				
         @if (Model.shop.GetAllItems().Count == 0)
         {
           <p>No items in the Shop!</p>
@@ -43,43 +46,9 @@
           }
         }
       </div>
-
-      <form action="/adventurebag" method="post">
-        <button type="submit" class="btn btn-dark">Test Your Luck</button>
-      </form>
-      <form action="/adventurebuy" method="post">
-
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Select Item</label>
-          <select class="form-control" id="exampleFormControlSelect1" name="buyitem">
-            @if(Model.shop.GetAllItems().Count != 0)
-            {
-              @foreach (BagItem item in Model.shop.GetAllItems())
-              {
-                <option>@item.Quanity @item.Name</option>
-              }
-            }
-          </select>
-        </div>
-        <button type="submit" class="btn btn-dark">Add Item</button>
-      </form>
+			<button type="button" class="btn btn-dark" id="buy">Buy Item</button>
 
     </div>
   </div>
 </body>
 </html>
-
-@* @if (Model.Count == 0)
-{
-  <p>You have no items in your to do list!</p>
-}
-@if(Model.Count != 0)
-{
-  @foreach (Item item in Model)
-  {
-    <li>@item.GetDescription()</li>
-  }
-} *@
-@*
-</ul>
-<a href="/items/new">Add a new item.</a> *@

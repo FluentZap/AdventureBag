@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adventure", "AdventureBag\Adventure.csproj", "{2C941A80-8CBD-431B-8658-913226729F47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventureTests", "AdventureBag.test\AdventureTests.csproj", "{610F8B38-A270-4346-B746-3067C7F0855B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C941A80-8CBD-431B-8658-913226729F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C941A80-8CBD-431B-8658-913226729F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C941A80-8CBD-431B-8658-913226729F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C941A80-8CBD-431B-8658-913226729F47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610F8B38-A270-4346-B746-3067C7F0855B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610F8B38-A270-4346-B746-3067C7F0855B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610F8B38-A270-4346-B746-3067C7F0855B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610F8B38-A270-4346-B746-3067C7F0855B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D06349A9-EB9B-457A-85C7-8104EFB2DD26}
+	EndGlobalSection
+EndGlobal
