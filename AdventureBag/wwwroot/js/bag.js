@@ -8,4 +8,5 @@
 			$("#shopList").load("/adventuregetlist");
 		});
 	});
+	//$("#shopList").
 });

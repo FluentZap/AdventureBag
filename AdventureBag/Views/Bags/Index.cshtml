@@ -24,9 +24,11 @@
 					}
 					@if (Model.bag.GetAllItems().Count != 0)
 					{
+						int i = 0;
 						@foreach (BagItem item in Model.bag.GetAllItems())
 						{
-							<li>@item.Quanity @item.Name</li>
+							i++;
+							<li id="bagItem + @i">@item.Quanity @item.Name</li>
 						}
 					}
 				</ul>
